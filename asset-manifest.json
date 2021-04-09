@@ -1,0 +1,20 @@
+{
+  "files": {
+    "main.css": "/postershop/static/css/main.5d054119.chunk.css",
+    "main.js": "/postershop/static/js/main.15a9f383.chunk.js",
+    "main.js.map": "/postershop/static/js/main.15a9f383.chunk.js.map",
+    "runtime-main.js": "/postershop/static/js/runtime-main.8f6366ad.js",
+    "runtime-main.js.map": "/postershop/static/js/runtime-main.8f6366ad.js.map",
+    "static/js/2.c71c1978.chunk.js": "/postershop/static/js/2.c71c1978.chunk.js",
+    "static/js/2.c71c1978.chunk.js.map": "/postershop/static/js/2.c71c1978.chunk.js.map",
+    "index.html": "/postershop/index.html",
+    "static/css/main.5d054119.chunk.css.map": "/postershop/static/css/main.5d054119.chunk.css.map",
+    "static/js/2.c71c1978.chunk.js.LICENSE.txt": "/postershop/static/js/2.c71c1978.chunk.js.LICENSE.txt"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.8f6366ad.js",
+    "static/js/2.c71c1978.chunk.js",
+    "static/css/main.5d054119.chunk.css",
+    "static/js/main.15a9f383.chunk.js"
+  ]
+}
