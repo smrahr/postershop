@@ -1,0 +1,43 @@
+*,
+*::after,
+*::before {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+ul,
+li {
+  list-style: none;
+}
+
+.wrapper {
+  width: 100%;
+  display: flex;
+  min-height: 100vh;
+}
+
+.products {
+  width: 75%;
+  border-right: 1px solid gray;
+  padding: 10px;
+}
+.products ul {
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.products ul li {
+  width: 50%;
+  padding: 10px;
+}
+
+.products ul li img {
+  width: 100%;
+  display: block;
+}
+
+.cart {
+  width: 25%;
+  padding: 10px;
+}

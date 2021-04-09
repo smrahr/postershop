@@ -1,25 +1,36 @@
-import logo from './logo.svg';
-import './App.css';
+import React, { Component } from 'react'
+import Cart from './components/Cart'
+import Products from './components/Products'
+import data from './components/data'
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+export default class App extends Component {
+
+  state= {
+    products : data,
+    orders :JSON.parse(localStorage.getItem('ordered'))  || {}
+  }
+
+
+  addToCart = (key) =>{
+    const orders = {...this.state.orders}
+    orders[key] =  orders[key]+1 || 1;
+    this.setState({orders})
+    localStorage.setItem('ordered', JSON.stringify(orders));
+  }
+
+  deleteOrder = (key)=>{
+    const orders = {...this.state.orders}
+    delete orders[key]
+    this.setState({orders})
+    localStorage.setItem('ordered', JSON.stringify(orders));
+  }
+
+  render() {
+    return (
+      <div className='wrapper'>
+        <Products addToCart={this.addToCart} products={this.state.products} orders={this.state.orders}/>
+        <Cart orders={this.state.orders} products={this.state.products} deleteOrder={this.deleteOrder}/>
+      </div>
+    )
+  }
 }
-
-export default App;
